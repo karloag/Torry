@@ -1,0 +1,21 @@
+ORGANIZATION_BLOCK MAIN:OB1
+TITLE=POU Comment
+BEGIN
+Network 1 // Network Title
+// Network Comment gfg
+LD     I0.0
+A      I0.1
+=      Q0.0
+END_ORGANIZATION_BLOCK
+SUBROUTINE_BLOCK SBR_0:SBR0
+TITLE=POU Comment
+BEGIN
+Network 1 // Network Title
+// Network Comment
+END_SUBROUTINE_BLOCK
+INTERRUPT_BLOCK INT_0:INT0
+TITLE=POU Comment
+BEGIN
+Network 1 // Network Title
+// Network Comment
+END_INTERRUPT_BLOCK
