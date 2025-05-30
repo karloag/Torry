@@ -1,0 +1,35 @@
+ORGANIZATION_BLOCK MAIN:OB1
+TITLE=POU Comment
+BEGIN
+Network 1 // Control Apertura De Cortina
+// Network Comment
+LDN    I0.0
+AN     I0.1
+LD     I0.2
+O      Q0.0
+ALD
+AN     I0.4
+AN     Q0.1
+=      Q0.0
+Network 2 // Control de Bajada de Cortina 
+LDN    I0.0
+AN     I0.1
+LD     I0.3
+O      Q0.1
+ALD
+AN     I0.5
+AN     Q0.0
+=      Q0.1
+END_ORGANIZATION_BLOCK
+SUBROUTINE_BLOCK SBR_0:SBR0
+TITLE=POU Comment
+BEGIN
+Network 1 // Network Title
+// Network Comment
+END_SUBROUTINE_BLOCK
+INTERRUPT_BLOCK INT_0:INT0
+TITLE=POU Comment
+BEGIN
+Network 1 // Network Title
+// Network Comment
+END_INTERRUPT_BLOCK
