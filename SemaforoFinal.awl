@@ -1,0 +1,55 @@
+ORGANIZATION_BLOCK MAIN:OB1
+TITLE=POU Comment
+BEGIN
+Network 1 // Network Title
+// Network Comment
+LD     I0.0
+O      M0.1
+AN     I0.1
+=      M0.1
+Network 2 // NS VERDE TIMER
+LD     M0.1
+AN     T40
+TON    T37, +300
+Network 3 // ROJAS TODAS TIMER 1
+LD     M0.1
+A      T37
+TON    T38, +150
+Network 4 // SN VERDE TIMER
+LD     M0.1
+A      T38
+TON    T39, +300
+Network 5 // ROJAS TODAS TIMER 2
+LD     M0.1
+A      T39
+TON    T40, +150
+Network 6 // NS VERDE
+LD     M0.1
+AN     T37
+=      Q0.0
+Network 7 // NS ROJA
+LD     M0.1
+AN     Q0.0
+=      Q0.1
+Network 8 // SN VERDE
+LD     M0.1
+A      T38
+AN     T39
+=      Q0.2
+Network 9 // SN ROJA
+LD     M0.1
+AN     Q0.2
+=      Q0.3
+END_ORGANIZATION_BLOCK
+SUBROUTINE_BLOCK SBR_0:SBR0
+TITLE=POU Comment
+BEGIN
+Network 1 // Network Title
+// Network Comment
+END_SUBROUTINE_BLOCK
+INTERRUPT_BLOCK INT_0:INT0
+TITLE=POU Comment
+BEGIN
+Network 1 // Network Title
+// Network Comment
+END_INTERRUPT_BLOCK
