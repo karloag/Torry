@@ -1,0 +1,64 @@
+---
+config:
+    theme: neutral
+    layout: elk.stress
+---
+graph TD
+    A[Internet de Todo - IdT] --> B1[Personas];
+    A --> B2[Datos];
+    A --> B3[Objetos];
+    A --> B4[Procesos];
+
+    subgraph Pillar_Personas [Personas]
+        B1 --> P1[Centro de IdT: Productores y Consumidores];
+        P1 --> P2[Conexiones: P2P, M2P];
+        P1 --> P3[Transformación del Comportamiento - Ciclo de Retroalimentación];
+        P1 --> P4[Colaboración];
+        P3 --> P5[Uso Empresarial: Marketing Dirigido y Micromarketing];
+    end
+
+    subgraph Pillar_Datos [Datos]
+        B2 --> D1[De Datos a Información y Conocimiento];
+        D1 --> D2[Representación Binaria - Bits];
+        D1 --> D3[Tipos: Estructurados y No Estructurados];
+        D1 --> D4[Gestión de Datos];
+        D4 --> D5[Almacenamiento: Local, Centralizado, Distribuido];
+        D4 --> D6[Transporte: ISPs, IP Packets, Direccionamiento IP - IPv4 y IPv6];
+        D1 --> D7[Big Data: Volumen, Variedad, Velocidad];
+        D1 --> D8[Datos en Movimiento vs. Datos en Reposo];
+    end
+
+    subgraph Pillar_Objetos [Objetos - IdC]
+        B3 --> O1[Internet de las Cosas - IdC];
+        O1 --> O2[Dispositivos Informáticos: CPU, Memoria, ES];
+        O2 --> O3[Ejemplos: PCs, Móviles, Sensores, Actuadores, Objetos cotidianos];
+        O3 --> O4[Sensores: RFID, Humedad, Temperatura, etc.];
+        O3 --> O5[Controladores];
+        O1 --> O6[Conectividad: Cableada e Inalámbrica - Wi-Fi, Bluetooth, NFC, Celular];
+    end
+
+    subgraph Pillar_Procesos [Procesos]
+        B4 --> PR1[Entrega de Información Correcta a Persona o Máquina Adecuada en Momento Justo];
+        PR1 --> PR2[Combinación de Conexiones];
+        PR2 --> PR3[M2M - Máquina a Máquina - IdC];
+        PR2 --> PR4[M2P - Máquina a Persona - Datos y Análisis];
+        PR2 --> PR5[P2P - Persona a Persona - Colaboración];
+        PR1 --> PR6[Generación de Valor en la Intersección de los Pilares];
+    end
+
+    subgraph Tecnologias_Habilitadoras [Tecnologías Habilitadoras Clave para IdT]
+        TH1[Cloud Computing] --> A;
+        TH1 --> C1[Virtualización];
+        TH1 --> C2[Centros de Datos];
+        TH1 --> C3[Servicios Cloud: SaaS, PaaS, IaaS, ITaaS];
+        TH1 --> C4[Modelos Cloud: Privada, Pública, Comunitaria, Híbrida];
+        TH2[Movilidad] --> A;
+        TH3[IPv6 - Escalabilidad de Direcciones] --> D6;
+        TH4[Big Data - como concepto habilitador general] --> A;
+    end
+
+    %% Styling (Optional, helps a bit with visual grouping)
+    classDef pillar fill:#f9f,stroke:#333,stroke-width:2px;
+    class B1,B2,B3,B4 pillar;
+    classDef tech fill:#lightgrey,stroke:#333,stroke-width:2px;
+    class TH1,TH2,TH3,TH4 tech;
